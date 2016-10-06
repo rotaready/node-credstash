@@ -2,6 +2,7 @@
 
 const Dynamo = require('./lib/dynamo');
 const KMS = require('./lib/KMS');
+const async = require('async');
 
 class Credstash {
     
@@ -28,6 +29,28 @@ class Credstash {
         this.dynamo.getItem(item, (err, encryptedItem) => {
             // Decrypt the item
             this.kms.decryptItem(encryptedItem, callback);
+        });
+    }
+    
+    getAll(items, callback) {
+        const decryptedItems = {};
+        
+        async.each(items, (item, callback) => {
+            // Get the item from DyanmoDB
+            this.dynamo.getItem(item, (err, encryptedItem) => {
+                // Decrypt the item
+                this.kms.decryptItem(encryptedItem, (err, decryptedItem) => {
+                    if (err) return callback(err);
+                    
+                    decryptedItems[item] = decryptedItem;
+                    
+                    callback();
+                });
+            });
+        }, (err) => {
+            if (err) return callback(err);
+            
+            callback(null, decryptedItems);
         });
     }
     
