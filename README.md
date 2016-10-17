@@ -2,7 +2,6 @@
 Node.js port of [credtash](https://github.com/fugue/credstash)
 
 ## Installation
-------
 As a command line tool:
 ```
 npm install node-credstash -g
@@ -14,11 +13,9 @@ npm install node-credstash --save
 ```
 
 ## Setup
-------
 Setup of the credtash table is on it's way, but for now we recommend using [credtash](https://github.com/fugue/credstash), or building the table yourself.
 
 ## Usage
-------
 ### Command line tool
 **Put**
 To store a value called `super_secret` with a value `abc123`, we'd do the following:
