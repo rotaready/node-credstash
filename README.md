@@ -27,14 +27,14 @@ To store a value called `super_secret` with a value `abc123`, we'd do the follow
 To get the value of `super_secret`:
 `node-credstash get super_secret`
 
-**Option**
+**Options**
 
 You can pass two arguments to both commands:
 * `--region` Your desired AWS region (this should be the same as your credstash table). Defaults to `us-east-1`
 * `--table` Your credstash table name. Defaults to `credential-store`
 
 ### Node.js Module
-***Initialise***
+**Initialise**
 
 ```javascript
 const Credstash = require('node-credstash');
