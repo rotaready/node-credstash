@@ -15,6 +15,8 @@ npm install node-credstash --save
 ## Setup
 Setup of the credtash table is on it's way, but for now we recommend using [credstash](https://github.com/fugue/credstash), or building the table yourself.
 
+Make sure you have some AWS credentials set up on your machine. There are a number of ways to do this, listed [here](http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html).
+
 ## Usage
 ### Command line tool
 **Put**
