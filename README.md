@@ -20,12 +20,16 @@ Setup of the credtash table is on it's way, but for now we recommend using [cred
 **Put**
 
 To store a value called `super_secret` with a value `abc123`, we'd do the following:
-```node-credstash put super_secret abc123```
+```
+node-credstash put super_secret abc123
+```
 
 **Get**
 
 To get the value of `super_secret`:
-`node-credstash get super_secret`
+```
+node-credstash get super_secret
+```
 
 **Options**
 
