@@ -13,7 +13,7 @@ class Credstash {
      * @param  string table  The name of the table our credstash credentials are in
      * @param  string keyId  The ID of the KMS key new credentials will be encrypted with
      */
-    constructor(region, table, keyId) {
+    constructor(region, table, keyId='alias/credstash') {
         this.region = region;
         this.table = table;
         this.dynamo = new Dynamo(region, table);
