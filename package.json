@@ -1,6 +1,6 @@
 {
   "name": "node-credstash",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "A node implementation of credstash",
   "main": "index.js",
   "bin": {
